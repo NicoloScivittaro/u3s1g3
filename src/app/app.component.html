@@ -1,12 +1,5 @@
 <app-navbar></app-navbar>
-<main>
 
-  <div *ngFor="let item of data">
-    <h2>{{ item.title }}</h2>
-    <p>{{ item.body }}</p>
-    <p><strong>User ID:</strong> {{ item.userId }}</p>
-    <p><strong>Tags:</strong> {{ item.tags.join(', ') }}</p>
-    <p><strong>Active:</strong> {{ item.active ? 'Yes' : 'No' }}</p>
-  </div>
-
-</main>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

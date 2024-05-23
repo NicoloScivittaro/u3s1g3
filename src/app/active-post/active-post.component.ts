@@ -1,18 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { iPost } from '../model/i-post';
+import { Component } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-active-posts',
+  templateUrl: './active-post.component.html',
+  styleUrl: './active-post.component.scss'
 })
-export class ActivePostComponent {
-  private jsonUrl = '../assets/db.json';
+export class ActivePostsComponent {
 
-  constructor(private http: HttpClient) { }
-
-  getData(): Observable<iPost[]> {
-    return this.http.get<iPost[]>(this.jsonUrl);
-  }
 }
-

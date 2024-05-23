@@ -5,18 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { ActivePostComponent } from './active-post/active-post.component';
+import { ActivePostsComponent } from './active-post/active-post.component';
 import { InactivePostComponent } from './inactive-post/inactive-post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ActivePostComponent,
+    ActivePostsComponent,
     InactivePostComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
