@@ -4,9 +4,24 @@ import { PostService } from '../post.service';
 import { iPost } from '../model/ipost';
 
 @Component({
-  selector: 'app-post-detail',
-  templateUrl: './post-detail.component.html',
-  styleUrls: ['./post-detail.component.scss']
+  selector: 'app-post-detail-form',
+  template: `
+    <div>
+      <ng-content></ng-content>
+      <form>
+        <div>
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  `,
+  styles: [`
+    form {
+      margin-top: 20px;
+    }
+  `]
 })
 export class PostDetailComponent implements OnInit {
   post: iPost | undefined;

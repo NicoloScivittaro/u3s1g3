@@ -4,6 +4,16 @@
   <p><strong>Tags:</strong> {{ post.tags.join(', ') }}</p>
   <p><strong>Active:</strong> {{ post.active ? 'Yes' : 'No' }}</p>
 </div>
+<div *ngIf="post">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.body }}</p>
+  <p><strong>Tags:</strong> {{ post.tags.join(', ') }}</p>
+  <p><strong>Active:</strong> {{ post.active ? 'Yes' : 'No' }}</p>
+  <app-post-detail-form>
+    <!-- Questo contenuto sarà passato all'interno di <ng-content> -->
+    <p>This is additional content specific to the post detail.</p>
+  </app-post-detail-form>
+</div>
 <div *ngIf="!post">
   <p>Post not found.</p>
 </div>
